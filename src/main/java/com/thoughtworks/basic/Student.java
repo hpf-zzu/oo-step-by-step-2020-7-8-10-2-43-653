@@ -36,27 +36,26 @@ public class Student extends Person {
 
     public void changeName(String name){
         setName(name);
-        this.schoolKlass.getTeacher().addMessage(this.introduce());
-
-        for ( Student student : this.schoolKlass.getStudents()){
-            student.addMessage(this.introduce());
-        }
+        sendMessageToOtherStudentAndTeacherInTheSameKlass();
     }
 
     public void changeKlass(SchoolKlass schoolKlass){
-        this.schoolKlass.getTeacher().addMessage(this.introduce());
-
-        for ( Student student : this.schoolKlass.getStudents()){
-            student.addMessage(this.introduce());
-        }
+        sendMessageToOtherStudentAndTeacherInTheSameKlass();
 
         setSchoolKlass(schoolKlass);
 
+        sendMessageToOtherStudentAndTeacherInTheSameKlass();
+        }
+
+
+
+    public void sendMessageToOtherStudentAndTeacherInTheSameKlass(){
         this.schoolKlass.getTeacher().addMessage(this.introduce());
 
         for ( Student student : this.schoolKlass.getStudents()){
-            student.addMessage(this.introduce());
+            if (student.getAge() != this.getAge() && student.getName() != this.getName()){
+            student.addMessage(this.introduce());}
         }
-
     }
+
 }
