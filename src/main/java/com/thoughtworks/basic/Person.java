@@ -1,8 +1,8 @@
 package com.thoughtworks.basic;
 
 public class Person {
-    int age;
-    String name;
+    private int age;
+    private String name;
 
     public String introduce(){
         return "My name is " + this.name + ".I am " + age + " years old.";
