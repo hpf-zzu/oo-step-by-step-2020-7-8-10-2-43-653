@@ -15,10 +15,11 @@ public class SchoolKlassTest {
         //given
         List<Student> students = new ArrayList<>();
         Teacher teacher = new Teacher(30,"Matt");
+        Student student = new Student (21,"Tom",2);
         SchoolKlass schoolKlass = new SchoolKlass(students,teacher);
         //when
-        schoolKlass.addStudent();
+        schoolKlass.addStudent(student);
         //then
-        Assert.assertNotNull(students);
+        Assert.assertNotEquals(students.size(),0);
     }
 }
