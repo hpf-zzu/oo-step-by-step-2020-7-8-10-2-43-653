@@ -15,7 +15,7 @@ public class SchoolKlassTest {
         //given
         List<Student> students = new ArrayList<>();
         Teacher teacher = new Teacher(30,"Matt");
-        Student student = new Student (21,"Tom",2);
+        Student student = new Student (21,"Tom");
         SchoolKlass schoolKlass = new SchoolKlass(students,teacher);
         //when
         schoolKlass.addStudent(student);

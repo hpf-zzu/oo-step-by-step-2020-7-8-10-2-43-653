@@ -8,6 +8,10 @@ public class Student extends Person {
         this.schoolKlass = schoolKlass;
     }
 
+    public Student(int age, String name) {
+        super(age, name);
+    }
+
     public SchoolKlass getSchoolKlass() {
         return schoolKlass;
     }

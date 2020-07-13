@@ -7,6 +7,10 @@ public class SchoolKlass {
     private List<Student> students;
     private Teacher teacher;
 
+    public SchoolKlass(int classNumber) {
+        this.classNumber = classNumber;
+    }
+
     public SchoolKlass(int classNumber, List<Student> students, Teacher teacher) {
         this.classNumber = classNumber;
         this.students = students;
@@ -42,8 +46,7 @@ public class SchoolKlass {
         this.teacher = teacher;
     }
 
-    public SchoolKlass() {
-    }
+
 
     public void addStudent(Student student) {
         this.students.add(student);
