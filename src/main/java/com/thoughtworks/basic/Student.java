@@ -1,23 +1,23 @@
 package com.thoughtworks.basic;
 
 public class Student extends Person {
-    private int classNumber;
+    private SchoolKlass schoolKlass;
 
-    public Student(int age, String name, int classNumber) {
+    public Student(int age, String name, SchoolKlass schoolKlass) {
         super(age, name);
-        this.classNumber = classNumber;
+        this.schoolKlass = schoolKlass;
     }
 
-    public int getClassNumber() {
-        return classNumber;
+    public SchoolKlass getSchoolKlass() {
+        return schoolKlass;
     }
 
-    public void setClassNumber(int classNumber) {
-        this.classNumber = classNumber;
+    public void setSchoolKlass(SchoolKlass schoolKlass) {
+        this.schoolKlass = schoolKlass;
     }
 
     @Override
     public String introduce() {
-        return  "My name is " + getName() + ".I am " + getAge() + " years old." + "I am a Student of Class " + this.classNumber + ".";
+        return  "My name is " + getName() + ".I am " + getAge() + " years old." + "I am a Student of Class " + this.schoolKlass.getClassNumber() + ".";
     }
 }
