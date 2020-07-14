@@ -42,6 +42,8 @@ public class Student extends Person {
     public void changeKlass(SchoolKlass schoolKlass){
         sendMessageToOtherStudentAndTeacherInTheSameKlass();
 
+        this.getSchoolKlass().deleteStudent(new Student(this.getAge(),this.getName()));
+
         setSchoolKlass(schoolKlass);
 
         sendMessageToOtherStudentAndTeacherInTheSameKlass();

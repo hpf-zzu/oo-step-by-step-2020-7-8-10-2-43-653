@@ -1,6 +1,7 @@
 package com.thoughtworks.basic;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class SchoolKlass {
     private int classNumber;
@@ -51,6 +52,14 @@ public class SchoolKlass {
     public void addStudent(Student student) {
         this.students.add(student);
     }
+    public void deleteStudent(Student student){
+        for (Student student1 : this.students){
+            if (student.getName().equals(student1.getName()) && student.getAge() == student1.getAge()){
+                this.students.remove(student1);
+            }
 
+        }
+
+    }
 
 }
